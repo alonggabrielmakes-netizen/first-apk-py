@@ -5,7 +5,6 @@ def main(page: ft.Page):
     page.window_width = 400
     page.window_height = 700
     
-    # Create UI elements
     txt = ft.Text(value="Hello, Flet! 🎉", size=24, weight=ft.FontWeight.BOLD)
     txt_input = ft.TextField(hint_text="Type something here...", width=300)
     
@@ -17,14 +16,9 @@ def main(page: ft.Page):
     
     btn = ft.ElevatedButton("Click Me!", on_click=btn_click, bgcolor=ft.colors.BLUE_600, color=ft.colors.WHITE)
     
-    # Add everything to the page
     page.add(
         ft.Column(
-            [
-                txt,
-                txt_input,
-                btn
-            ],
+            [txt, txt_input, btn],
             alignment=ft.MainAxisAlignment.CENTER,
             horizontal_alignment=ft.CrossAxisAlignment.CENTER,
             spacing=30,
@@ -34,3 +28,4 @@ def main(page: ft.Page):
 
 if __name__ == "__main__":
     ft.app(target=main)
+
